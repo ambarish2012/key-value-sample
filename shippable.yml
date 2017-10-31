@@ -1,9 +1,9 @@
-language: none
+language: java
 
 build:
   ci:
-    - echo $SECRET_1
-    - echo $SECRET_2
+    - echo $GPG_KEY_NAME
+    - echo $GPG_PASSPHRASE
 
 integrations:
   generic:
