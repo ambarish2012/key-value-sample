@@ -1,0 +1,10 @@
+language: none
+
+build:
+  ci:
+    - echo $SECRET_1
+    - echo $SECRET_2
+
+integrations:
+  generic:
+    - integrationName: secrets-integration
