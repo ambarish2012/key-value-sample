@@ -1,17 +1,10 @@
-language: java
-
-build:
-  ci:
-    - echo $GPG_KEY_NAME
-    - echo $GPG_PASSPHRASE
-
 resources:
   - name: contegix2
     type: integration
     integration: secrets-integration
 
 jobs:
-  - name: key-value-sample_runCI
-    type: runCI
+  - name: samplerunsh
+    type: runSh
     steps:
       - IN: contegix1
