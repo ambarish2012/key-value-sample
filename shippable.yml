@@ -5,6 +5,13 @@ build:
     - echo $GPG_KEY_NAME
     - echo $GPG_PASSPHRASE
 
-integrations:
-  generic:
-    - integrationName: secrets-integration
+resources:
+  - name: contegix
+    type: integration
+    integration: secrets-integration
+
+jobs:
+  -name: key-value-sample_runCI
+   type: runCI
+   steps:
+     - IN: secrets-integration
