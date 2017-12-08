@@ -6,7 +6,7 @@ build:
     - echo $GPG_PASSPHRASE
 
 resources:
-  - name: contegix
+  - name: contegix2
     type: integration
     integration: secrets-integration
 
