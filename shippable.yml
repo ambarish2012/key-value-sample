@@ -14,4 +14,4 @@ jobs:
   - name: key-value-sample_runCI
     type: runCI
     steps:
-      - IN: contegix
+      - IN: contegix1
