@@ -12,7 +12,7 @@ jobs:
   - name: testjob
     type: runSh
     steps:
-      - IN: testgitrepo
+      - IN: TG
       - TASK: 
         - script: echo $TG_PATH
         - script: echo $TG_STATE
