@@ -4,3 +4,22 @@ build:
   ci:
     - cat /etc/issue
    
+resources:   
+  
+  - name: TG
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: ambarish2012/key-value-sample
+      branch: master
+jobs:
+
+  - name: testjob
+    type: runSh
+    steps:
+      - IN: testgitrepo
+      - TASK: script
+        - SCRIPT: echo $TG_PATH
+        - SCRIPT: echo $TG_STATE
+        
+        
