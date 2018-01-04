@@ -1,9 +1,3 @@
-language: none
-
-build:
-  ci:
-    - cat /etc/issue
-   
 resources:   
   
   - name: TG
@@ -12,6 +6,7 @@ resources:
     pointer:
       sourceName: ambarish2012/key-value-sample
       branch: master
+      
 jobs:
 
   - name: testjob
