@@ -15,6 +15,6 @@ jobs:
       - IN: TG
       - TASK: 
         - script: echo $TG_PATH
-        - script: echo $TG_STATE
-        
+        - script: echo $TG_STATE && pushd $TG_STATE
+        - script: ls -ltr && popd
         
