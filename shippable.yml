@@ -18,8 +18,8 @@ jobs:
     type: runSh
     steps:
       - IN: testgitrepo
-      - TASK: script
-        - SCRIPT: echo $TG_PATH
-        - SCRIPT: echo $TG_STATE
+      - TASK: 
+        - script: echo $TG_PATH
+        - script: echo $TG_STATE
         
         
