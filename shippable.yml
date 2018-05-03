@@ -6,7 +6,19 @@ resources:
     pointer:
       sourceName: ambarish2012/key-value-sample
       branch: master
-      
+    
+  - name: TG1
+    type: file
+    integration: drship_artifactory
+    versionTemplate:
+      sourceName: ambarish2012/kvs
+     
+  - name: TG2
+    type: file
+    integration: drship_artifactory
+    pointer:
+      sourceName: ambarish2012/kvs
+     
 jobs:
 
   - name: testjob
@@ -17,4 +29,8 @@ jobs:
         - script: echo $TG_PATH
         - script: echo $TG_STATE && pushd $TG_STATE
         - script: ls -ltr && popd
+        - script: sourceName1="$(shipctl get_resource_version_key TG1 sourceName)"
+        - script: sourceName2="$(shipctl get_resource_version_key TG2 sourceName)"
+        - echo $sourceName1
+        - echo $sourceName2
         
