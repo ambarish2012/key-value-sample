@@ -35,6 +35,6 @@ jobs:
         - script: ls -ltr && popd
         - script: sourceName1="$(shipctl get_resource_version_key TG1 sourceName)"
         - script: sourceName2="$(shipctl get_resource_version_key TG2 sourceName)"
-        - echo $sourceName1
-        - echo $sourceName2
+        - script: echo $sourceName1
+        - script: echo $sourceName2
         
