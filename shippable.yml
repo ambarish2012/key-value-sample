@@ -27,6 +27,8 @@ jobs:
     type: runSh
     steps:
       - IN: TG
+      - IN: TG1
+      - IN: TG2
       - TASK: 
         - script: echo $TG_PATH
         - script: echo $TG_STATE && pushd $TG_STATE
