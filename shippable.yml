@@ -12,13 +12,15 @@ resources:
     integration: drship_artifactory
     versionTemplate:
       sourceName: ambarish2012/kvs
-     
+      versionName: foo
+      
   - name: TG2
     type: file
     integration: drship_artifactory
     pointer:
       sourceName: ambarish2012/kvs
-     
+      versionName: foo 
+
 jobs:
 
   - name: testjob
